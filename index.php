@@ -134,7 +134,7 @@ if(isset($_REQUEST['action'])) {
 			<option value="12">30</option>
 			<option value="12">31</option>
 			</select>
-			<br/>
+
 		<label for="dob-month">Month: </label>
 			<select class="round-border" id="dob-month" name="dob-month" data-validate="required:false">
 			<option value="">Please select...</option>
@@ -151,7 +151,7 @@ if(isset($_REQUEST['action'])) {
 			<option value="11">11</option>
 			<option value="12">12</option>
 			</select>
-			<br/>
+
 		<label for="dob-year">Year:</label>
 			<select class="round-border" id="dob-year" name="dob-year" data-validate="required:false">
 			<option value="">Please select...</option>
