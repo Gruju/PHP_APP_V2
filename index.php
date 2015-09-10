@@ -20,7 +20,7 @@ $dobDay = '';
 $dobMonth = '';
 $dobYear = '';
 $row = '';
-
+$MartianDays = '';
 
 $resultTable = "";
 if(isset($_REQUEST['action'])) {
@@ -186,7 +186,6 @@ if(isset($_REQUEST['action'])) {
 		<?=$surname;?>
 		<?=$hasbeenAliveString;?>
 		<?=$MartianDays;?>
-		<?=$dDiff->days;?>
 		<?=$string;?>
 		<?=$resultTable;?>
 		</form>
