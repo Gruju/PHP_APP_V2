@@ -55,6 +55,10 @@ if(isset($_REQUEST['action'])) {
 				$sql = "INSERT INTO person_refined(pname,dobday,dobmonth,dobyear,timestamp,daysalive,surname) VALUES('$Firstname','$dobDay','$dobMonth','$dobYear',Now(),'$days','$surname')";
 				//$sql = "INSERT INTO person_refined (pname) VALUES('TEST')";
 				$dbInsert = pg_query($db,$sql);
+				if($dbInsert == FALSE)
+				{
+					echo pg_last_error();
+				}
 				$result = pg_query($db, "SELECT * FROM person_refined");
 				while($row = pg_fetch_assoc($result)) {
 					//echo $row;
