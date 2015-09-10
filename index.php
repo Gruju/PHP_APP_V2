@@ -185,7 +185,7 @@ if(isset($_REQUEST['action'])) {
 		<?=$Firstname;?>
 		<?=$surname;?>
 		<?=$hasbeenAliveString;?>
-		<?=$dDiff->days;?>
+		<?=$MartianDays;?>
 		<?=$string;?>
 		<?=$resultTable;?>
 		</form>
