@@ -94,13 +94,12 @@ if(isset($_REQUEST['action'])) {
 <h2>Simple Web Application</h2>
 		<form id="standard" action="?action=submit" method="post" enctype="multipart/form-data">
 		<h4>How many days a person has been alive</h4>
-		<label style="display:inline-block;" for="Firstname">First Name: </label>
+		<label for="Firstname">First Name: </label>
 		<input type="text" name="Firstname" id="Firstname"/>
-		<br/>
-		<label style="display:inline-block;" for="surname">Surname: </label>
+		<label for="surname">Surname: </label>
 		<input type="text" name="surname" id="surname"/>
 		<br/>
-		<label style="display:inline-block;" for="dob-day">Day: </label>
+		<label for="dob-day">Day: </label>
 			<select class="round-border" id="dob-day" name="dob-day" data-validate="required:false">
 			<option value="">Please select...</option>
 			<option value="01">01</option>
@@ -136,7 +135,7 @@ if(isset($_REQUEST['action'])) {
 			<option value="12">31</option>
 			</select>
 			<br/>
-		<label style="display:inline-block;" for="dob-month">Month: </label>
+		<label for="dob-month">Month: </label>
 			<select class="round-border" id="dob-month" name="dob-month" data-validate="required:false">
 			<option value="">Please select...</option>
 			<option value="01">01</option>
@@ -153,7 +152,7 @@ if(isset($_REQUEST['action'])) {
 			<option value="12">12</option>
 			</select>
 			<br/>
-		<label style="display:inline-block;" for="dob-year">Year:</label>
+		<label for="dob-year">Year:</label>
 			<select class="round-border" id="dob-year" name="dob-year" data-validate="required:false">
 			<option value="">Please select...</option>
 			<option value="1990">1990</option>
