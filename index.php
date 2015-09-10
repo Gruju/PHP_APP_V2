@@ -54,7 +54,7 @@ if(isset($_REQUEST['action'])) {
 									<th>Earth Days Alive</th>
 									<th>Martian Days Alive</th>
 								</tr>";
-				$sql = "INSERT INTO person_refined(pname,dobday,dobmonth,dobyear,timestamp,daysalive,surname,martiandaysalive) VALUES('$Firstname','$dobDay','$dobMonth','$dobYear',Now(),'$days','$MartianDays','$surname')";
+				$sql = "INSERT INTO person_refined(pname,dobday,dobmonth,dobyear,timestamp,daysalive,surname,martiandaysalive) VALUES('$Firstname','$dobDay','$dobMonth','$dobYear',Now(),'$days','$surname','$MartianDays')";
 				//$sql = "INSERT INTO person_refined (pname) VALUES('TEST')";
 				$dbInsert = pg_query($db,$sql);
 				if($dbInsert == FALSE)
