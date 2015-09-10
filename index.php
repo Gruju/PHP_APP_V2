@@ -36,7 +36,9 @@ if(isset($_REQUEST['action'])) {
 				$dStart = new DateTime($dobFormat);
 				$dEnd = new DateTime($Now);
 				$dDiff = $dStart->diff($dEnd);
-				$string = " Martian Days.";
+				$string = "Earth Days."
+				$string2 = " Martian Days.";
+				$and = "and";
 				$hasbeenAliveString = "has been alive for: ";
 				$days = $dDiff->days;
 				$years = $dDiff->years;
@@ -191,8 +193,11 @@ if(isset($_REQUEST['action'])) {
 		<?=$Firstname;?>
 		<?=$surname;?>
 		<?=$hasbeenAliveString;?>
-		<?=$MartianDays;?>
+		<?=$dDiff->d;?>
 		<?=$string;?>
+		<?=$and;?>
+		<?=$MartianDays;?>
+		<?=$string2;?>
 		<?=$resultTable;?>
 		</form>
 </body>
