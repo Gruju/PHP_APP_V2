@@ -180,7 +180,7 @@ if(isset($_REQUEST['action'])) {
 		</div>
 		<input type="hidden" name="FormSubmit" value="true" />
 		<br/>
-		<?=$name;?>
+		<?=$Firstname;?>
 		<?=$hasbeenAliveString;?>
 		<?=$dDiff->days;?>
 		<?=$string;?>
