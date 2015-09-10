@@ -191,7 +191,7 @@ if(isset($_REQUEST['action'])) {
 		</div>
 		<input type="hidden" name="FormSubmit" value="true" />
 		<br/>
-		<div style="text-align:center;vertical-align:middle;">
+		<div style="text-align:center;vertical-align:middle">
 		<?=$Firstname;?>
 		<?=$surname;?>
 		<?=$hasbeenAliveString;?>
