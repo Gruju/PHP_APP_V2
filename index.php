@@ -40,7 +40,7 @@ if(isset($_REQUEST['action'])) {
 				$hasbeenAliveString = "has been alive for: ";
 				$days = $dDiff->days;
 				$years = $dDiff->years;
-				$MartianDays = round(($days/365)*686);
+				$MartianDays = round(($days/365)*686));
 				$resultTable .= "<h2>Database Table</h2>
 								<table>
 								<tr>
@@ -51,7 +51,7 @@ if(isset($_REQUEST['action'])) {
 									<th width='350'>Timestamp</th>
 									<th>Days Alive</th>
 								</tr>";
-				$sql = "INSERT INTO person_refined(pname,dobday,dobmonth,dobyear,timestamp,daysalive,surname) VALUES('$Firstname','$dobDay','$dobMonth','$dobYear',Now(),'$days','$surname')";
+				$sql = "INSERT INTO person_refined(pname,dobday,dobmonth,dobyear,timestamp,daysalive,surname) VALUES('$Firstname','$dobDay','$dobMonth','$dobYear',Now(),'$MartianDays','$surname')";
 				$dbInsert = pg_query($db,$sql);
 				$result = pg_query($db, "SELECT * FROM person_refined");
 				while($row = pg_fetch_assoc($result)) {
