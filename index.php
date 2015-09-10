@@ -89,7 +89,7 @@ if(isset($_REQUEST['action'])) {
 	<meta name="description" content="SW30004: Software Deployment and Evolution - Assignment 1" />
 	<meta name="keywords" content="SWE3004" />
 </head>
-<body>
+<body style="text-align:center;vertical-align:middle">
 <h1>SWE3004: Assignment 1</h1>
 <h2>Simple Web Application</h2>
 		<form id="standard" action="?action=submit" method="post" enctype="multipart/form-data">
