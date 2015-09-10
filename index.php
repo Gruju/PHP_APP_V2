@@ -193,7 +193,7 @@ if(isset($_REQUEST['action'])) {
 		<?=$Firstname;?>
 		<?=$surname;?>
 		<?=$hasbeenAliveString;?>
-		<?=$dDiff->d;?>
+		<?=$days;?>
 		<?=$string;?>
 		<?=$and;?>
 		<?=$MartianDays;?>
