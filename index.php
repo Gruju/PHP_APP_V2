@@ -192,6 +192,7 @@ if(isset($_REQUEST['action'])) {
 		<?=$surname;?>
 		<?=$hasbeenAliveString;?>
 		<?=$MartianDays;?>
+		<?=$days;?>
 		<?=$string;?>
 		<?=$resultTable;?>
 		</form>
