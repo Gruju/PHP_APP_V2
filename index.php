@@ -36,7 +36,7 @@ if(isset($_REQUEST['action'])) {
 				$dStart = new DateTime($dobFormat);
 				$dEnd = new DateTime($Now);
 				$dDiff = $dStart->diff($dEnd);
-				$string = " Martian Days.";
+				$string = " Martian Days";
 				$string2 = " and Earth Days.";
 				$hasbeenAliveString = "has been alive for: ";
 				$days = $dDiff->days;
@@ -51,9 +51,10 @@ if(isset($_REQUEST['action'])) {
 									<th>Surname</th>
 									<th>DOB</th>
 									<th width='350'>Timestamp</th>
-									<th>Days Alive</th>
+									<th>Earth Days Alive</th>
+									<th>Martian Days Alive</th>
 								</tr>";
-				$sql = "INSERT INTO person_refined(pname,dobday,dobmonth,dobyear,timestamp,daysalive,surname) VALUES('$Firstname','$dobDay','$dobMonth','$dobYear',Now(),'$MartianDays','$surname')";
+				$sql = "INSERT INTO person_refined(pname,dobday,dobmonth,dobyear,timestamp,daysalive,surname,martiandaysalive) VALUES('$Firstname','$dobDay','$dobMonth','$dobYear',Now(),'$days','$MartianDays','$surname')";
 				//$sql = "INSERT INTO person_refined (pname) VALUES('TEST')";
 				$dbInsert = pg_query($db,$sql);
 				if($dbInsert == FALSE)
@@ -70,6 +71,7 @@ if(isset($_REQUEST['action'])) {
 										<td align='center'>".$row['dobday']."-".$row['dobmonth']."-".$row['dobyear']."</td>
 										<td align='center'>".$row['timestamp']."</td>
 										<td align='center'>".$row['daysalive']."</td>
+										<td align='center'>".$row['martiandaysalive']."</td>
 									</tr>";}
 			$resultTable .= "</table>";
 
