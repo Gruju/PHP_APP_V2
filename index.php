@@ -26,7 +26,7 @@ $resultTable = "";
 if(isset($_REQUEST['action'])) {
 		if($_REQUEST['action'] == "submit") {
 				$Firstname = $_POST['Firstname'];
-				$surmane = $_POST['surname'];
+				$surname = $_POST['surname'];
 				$dobDay = $_POST['dob-day'];
 				$dobMonth = $_POST['dob-month'];
 				$dobYear = $_POST['dob-year'];
