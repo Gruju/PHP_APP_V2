@@ -40,7 +40,7 @@ if(isset($_REQUEST['action'])) {
 				$hasbeenAliveString = "has been alive for: ";
 				$days = $dDiff->days;
 				$years = $dDiff->years;
-				$MartianDays = ($days/365)*686;
+				$MartianDays = round(($days/365)*686);
 				$resultTable .= "<h2>Database Table</h2>
 								<table>
 								<tr>
