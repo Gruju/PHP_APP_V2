@@ -47,9 +47,9 @@ if(isset($_REQUEST['action'])) {
 									<th width='350'>Timestamp</th>
 									<th>Days Alive</th>
 								</tr>";
-				$sql = "INSERT INTO person(pFirstName,pSurname,dobday,dobmonth,dobyear, timestamp, daysalive) VALUES('$Firstname','$Surname','$dobDay','$dobMonth','$dobYear',Now(),'$days')";
+				$sql = "INSERT INTO person_refined(pFirstName,pSurname,dobday,dobmonth,dobyear, timestamp, daysalive) VALUES('$Firstname','$Surname','$dobDay','$dobMonth','$dobYear',Now(),'$days')";
 				$dbInsert = pg_query($db,$sql);
-				$result = pg_query($db, "SELECT * FROM person");
+				$result = pg_query($db, "SELECT * FROM person_refined");
 				while($row = pg_fetch_assoc($result)) {
 					//echo $row;
 					$resultTable .= "<tr>
