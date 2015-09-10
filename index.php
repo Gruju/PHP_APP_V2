@@ -99,6 +99,7 @@ if(isset($_REQUEST['action'])) {
 		<label for="surname">Surname: </label>
 		<input type="text" name="surname" id="surname"/>
 		<br/>
+		<br/>
 		<label for="dob-day">Day: </label>
 			<select class="round-border" id="dob-day" name="dob-day" data-validate="required:false">
 			<option value="">Please select...</option>
