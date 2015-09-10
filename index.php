@@ -37,7 +37,7 @@ if(isset($_REQUEST['action'])) {
 				$dEnd = new DateTime($Now);
 				$dDiff = $dStart->diff($dEnd);
 				$string = " Martian Days.";
-				$string2 = " Earth Days.";
+				$string2 = " and Earth Days.";
 				$hasbeenAliveString = "has been alive for: ";
 				$days = $dDiff->days;
 				$years = $dDiff->years;
