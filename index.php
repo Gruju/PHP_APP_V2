@@ -49,7 +49,7 @@ if(isset($_REQUEST['action'])) {
 									<th width='350'>Timestamp</th>
 									<th>Days Alive</th>
 								</tr>";
-				$sql = "INSERT INTO person_refined(pname,dobday,dobmonth,dobyear, timestamp, daysalive, surname) VALUES('$Firstname','$dobDay','$dobMonth','$dobYear',Now(),'$days','$Surname')";
+				$sql = "INSERT INTO person_refined(pname,dobday,dobmonth,dobyear,timestamp,daysalive,surname) VALUES('$Firstname','$dobDay','$dobMonth','$dobYear',Now(),'$days','$Surname')";
 				$dbInsert = pg_query($db,$sql);
 				$result = pg_query($db, "SELECT * FROM person_refined");
 				while($row = pg_fetch_assoc($result)) {
@@ -181,6 +181,7 @@ if(isset($_REQUEST['action'])) {
 		<input type="hidden" name="FormSubmit" value="true" />
 		<br/>
 		<?=$Firstname;?>
+		<?=$Surname;?>
 		<?=$hasbeenAliveString;?>
 		<?=$dDiff->days;?>
 		<?=$string;?>
