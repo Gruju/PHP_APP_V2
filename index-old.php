@@ -78,11 +78,9 @@ if(isset($_REQUEST['action'])) {
 <h2>Simple Web Application</h2>
 		<form id="standard" action="?action=submit" method="post" enctype="multipart/form-data">
 		<h4>How many days a person has been alive</h4>
-		<label for="Firstname">First Name: </label>
-		<input type="text" name="Firstname" id="Firstname"/>
+		<label for="name">Name: </label>
+		<input type="text" name="name" id="name"/>
 		<br/>
-		<label for="Surname">Surname: </label>
-		<input type="text" name="Surname" id="Surname"/>
 		<br/>
 		<label for="dob-day">Day: </label>
 			<select class="round-border" id="dob-day" name="dob-day" data-validate="required:false">
