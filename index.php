@@ -14,6 +14,8 @@ if (!$db) {
 
 
 $name = '';
+$firstName = '';
+$Surname = '';
 $dobDay = '';
 $dobMonth = '';
 $dobYear = '';
@@ -54,8 +56,8 @@ if(isset($_REQUEST['action'])) {
 					//echo $row;
 					$resultTable .= "<tr>
 										<td align='center'>".$row['p_id']."</td>
-										<td align='center'>".$row['Firstname']."</td>
-										<td align='center'>".$row['Surname']."</td>
+										<td align='center'>".$row['pname']."</td>
+										<td align='center'>".$row['surname']."</td>
 										<td align='center'>".$row['dobday']."-".$row['dobmonth']."-".$row['dobyear']."</td>
 										<td align='center'>".$row['timestamp']."</td>
 										<td align='center'>".$row['daysalive']."</td>
