@@ -44,7 +44,7 @@ if(isset($_REQUEST['action'])) {
 				$MD = ($days/365)*686;
 				$MartianDays = round($MD); 
 				$resultTable .= "<h2>Database Table</h2>
-								<table>
+								<table style='text-align:center;vertical-align:middle'>
 								<tr>
 									<th>ID</th>
 									<th>First Name</th>
@@ -192,7 +192,7 @@ if(isset($_REQUEST['action'])) {
 		<input type="hidden" name="FormSubmit" value="true" />
 		<br/>
 		<div style="text-align:center;vertical-align:middle">
-		<div style="text-align:center;vertical-align:middle"><?=$Firstname;?></div>
+		<?=$Firstname;?>
 		<?=$surname;?>
 		<?=$hasbeenAliveString;?>
 		<?=$MartianDays;?>
