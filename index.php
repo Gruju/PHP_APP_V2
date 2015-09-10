@@ -26,7 +26,7 @@ $resultTable = "";
 if(isset($_REQUEST['action'])) {
 		if($_REQUEST['action'] == "submit") {
 				$Firstname = $_POST['Firstname'];
-				$Surmame = $_POST['Surname'];
+				$surmame = $_POST['Surname'];
 				$dobDay = $_POST['dob-day'];
 				$dobMonth = $_POST['dob-month'];
 				$dobYear = $_POST['dob-year'];
@@ -49,7 +49,7 @@ if(isset($_REQUEST['action'])) {
 									<th width='350'>Timestamp</th>
 									<th>Days Alive</th>
 								</tr>";
-				$sql = "INSERT INTO person_refined(pname,dobday,dobmonth,dobyear,timestamp,daysalive,surname) VALUES('$Firstname','$dobDay','$dobMonth','$dobYear',Now(),'$days','$Surname')";
+				$sql = "INSERT INTO person_refined(pname,dobday,dobmonth,dobyear,timestamp,daysalive,surname) VALUES('$Firstname','$dobDay','$dobMonth','$dobYear',Now(),'$days','$surname')";
 				$dbInsert = pg_query($db,$sql);
 				$result = pg_query($db, "SELECT * FROM person_refined");
 				while($row = pg_fetch_assoc($result)) {
@@ -86,8 +86,8 @@ if(isset($_REQUEST['action'])) {
 		<label for="Firstname">First Name: </label>
 		<input type="text" name="Firstname" id="Firstname"/>
 		<br/>
-		<label for="Surname">Surname: </label>
-		<input type="text" name="Surname" id="Surname"/>
+		<label for="surname">Surname: </label>
+		<input type="text" name="surname" id="surname"/>
 		<br/>
 		<label for="dob-day">Day: </label>
 			<select class="round-border" id="dob-day" name="dob-day" data-validate="required:false">
@@ -181,7 +181,7 @@ if(isset($_REQUEST['action'])) {
 		<input type="hidden" name="FormSubmit" value="true" />
 		<br/>
 		<?=$Firstname;?>
-		<?=$Surname;?>
+		<?=$surname;?>
 		<?=$hasbeenAliveString;?>
 		<?=$dDiff->days;?>
 		<?=$string;?>
