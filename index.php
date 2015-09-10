@@ -40,10 +40,7 @@ if(isset($_REQUEST['action'])) {
 				$hasbeenAliveString = "has been alive for: ";
 				$days = $dDiff->days;
 				$years = $dDiff->years;
-				echo $years;
-				$MartianDays = $years * 686;
-				echo "<br/>";
-				echo $martianDays;
+				$MartianDays = ($days/365)*686;
 				$resultTable .= "<h2>Database Table</h2>
 								<table>
 								<tr>
@@ -189,6 +186,7 @@ if(isset($_REQUEST['action'])) {
 		<?=$surname;?>
 		<?=$hasbeenAliveString;?>
 		<?=$MartianDays;?>
+		<?=$dDiff->days;?>
 		<?=$string;?>
 		<?=$resultTable;?>
 		</form>
