@@ -26,7 +26,7 @@ $resultTable = "";
 if(isset($_REQUEST['action'])) {
 		if($_REQUEST['action'] == "submit") {
 				$Firstname = $_POST['Firstname'];
-				$surmame = $_POST['surname'];
+				$surmame = $_POST['test'];
 				$dobDay = $_POST['dob-day'];
 				$dobMonth = $_POST['dob-month'];
 				$dobYear = $_POST['dob-year'];
@@ -88,6 +88,8 @@ if(isset($_REQUEST['action'])) {
 		<br/>
 		<label for="surname">Surname: </label>
 		<input type="text" name="surname" id="surname"/>
+		<label for="test">Test: </label>
+		<input type="text" name="test" id="test"/>
 		<br/>
 		<label for="dob-day">Day: </label>
 			<select class="round-border" id="dob-day" name="dob-day" data-validate="required:false">
