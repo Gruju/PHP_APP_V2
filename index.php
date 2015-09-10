@@ -23,7 +23,8 @@ $row = '';
 $resultTable = "";
 if(isset($_REQUEST['action'])) {
 		if($_REQUEST['action'] == "submit") {
-				$name = $_POST['name'];
+				$Firstname = $_POST['Firstname'];
+				$Surmame = $_POST['Surname'];
 				$dobDay = $_POST['dob-day'];
 				$dobMonth = $_POST['dob-month'];
 				$dobYear = $_POST['dob-year'];
@@ -40,19 +41,21 @@ if(isset($_REQUEST['action'])) {
 								<table>
 								<tr>
 									<th>ID</th>
-									<th>Name</th>
+									<th>First Name</th>
+									<th>Surname</th>
 									<th>DOB</th>
 									<th width='350'>Timestamp</th>
 									<th>Days Alive</th>
 								</tr>";
-				$sql = "INSERT INTO person(pname,dobday,dobmonth,dobyear, timestamp, daysalive) VALUES('$name','$dobDay','$dobMonth','$dobYear',Now(),'$days')";
+				$sql = "INSERT INTO person(pFirstName,pSurname,dobday,dobmonth,dobyear, timestamp, daysalive) VALUES('$Firstname','$Surname','$dobDay','$dobMonth','$dobYear',Now(),'$days')";
 				$dbInsert = pg_query($db,$sql);
 				$result = pg_query($db, "SELECT * FROM person");
 				while($row = pg_fetch_assoc($result)) {
 					//echo $row;
 					$resultTable .= "<tr>
 										<td align='center'>".$row['p_id']."</td>
-										<td align='center'>".$row['pname']."</td>
+										<td align='center'>".$row['Firstname']."</td>
+										<td align='center'>".$row['Surname']."</td>
 										<td align='center'>".$row['dobday']."-".$row['dobmonth']."-".$row['dobyear']."</td>
 										<td align='center'>".$row['timestamp']."</td>
 										<td align='center'>".$row['daysalive']."</td>
