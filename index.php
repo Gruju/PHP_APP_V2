@@ -195,6 +195,7 @@ if(isset($_REQUEST['action'])) {
 		<?=$MartianDays;?>
 		<?=$string;?>
 		<?=$days;?>
+		<?=$string2;?>
 		<?=$resultTable;?>
 		</form>
 </body>
